@@ -1,0 +1,95 @@
+body{
+   font-family: "Roboto Slab", serif;
+   font-weight: 500;
+   font-size: 16px;
+}
+
+.container-fluid{
+   width: 90%;
+   margin: 0 auto;
+}
+
+/* nav-bar */
+
+.navbar{
+   background-color: rgb(11, 78, 65);
+   padding: 0;
+}
+
+.navbar-logo{
+   height: 40px;
+}
+
+.nav-link{
+   font-size: 1.1rem;
+   color: white;
+}
+
+.nav-link:hover{
+   background-color: rgb(220, 220, 220);
+   color: black;
+}
+
+.navbar-toggler-icon{
+   width: 20px;
+   height: 20px;
+   filter: invert(1);
+}
+
+/* hero section */
+
+.hero{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.hero-video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.video-mobile{
+   display: block;
+}
+
+.video-desktop{
+   display: none;
+}
+
+.hero-heading{
+   font-size: clamp(2.5rem, 3.5vw, 4.5rem);
+   font-weight: 600;
+   color: rgb(6, 73, 60);
+   display: flex;
+   justify-content: center;
+   margin-top: clamp(10vh, 15vh, 20vh);
+}
+
+.hero-paragraph{
+   font-size: clamp(1.3rem, 1.8vw, 2.2rem);
+   font-weight: 500;
+   color: rgb(203, 201, 185);
+   justify-content: center;
+   text-align: center;
+   margin-top: 2em;
+}
+
+/* responsive for > 650px */
+
+@media(min-width: 650px){
+   .video-mobile{
+      display: none;
+   }
+   .video-desktop{
+      display: block;
+   }
+}
+
+/* responsive for > 900px */
