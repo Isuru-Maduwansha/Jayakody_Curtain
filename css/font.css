@@ -1,6 +1,26 @@
+/* Roboto-Slab font */
+
 @font-face {
   font-family: 'Roboto Slab';
   src: url('../font/Roboto_Slab/RobotoSlab-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+/* Oswald font */
+
+@font-face{
+  font-family: 'Oswald';
+  src: url('../font/Oswald/Oswald-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+/* Mostserrat font */
+
+@font-face{
+  font-family: 'Montserrat';
+  src: url('../font/Montserrat/Montserrat-VariableFont_wght.ttf') format('truetype');
   font-weight: 100 900;
   font-style: normal;
 }

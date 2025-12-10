@@ -6,6 +6,9 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
    <title>Jayakody Curtains</title>
 
+   <!-- font linked -->
+   <link rel="stylesheet" href="./css/font.css">
+
    <!-- bootstrap css linked -->
    <link rel="stylesheet" href="./bootstrap-5.3.8/css/bootstrap.min.css">
 
@@ -41,7 +44,7 @@
                      <a href="" class="nav-link">Contact Us</a>
                   </li>
                   <li class="nav-item">
-                     <a href="" class="nav-link btn" id="btnStyle">Log In</a>
+                     <a href="" class="nav-link btn btn-login" id="ButtonLogin">Log In</a>
                   </li>
                </ul>
             </div>
@@ -63,11 +66,94 @@
       </video>
 
       <div class="container-fluid">
-         <h1 class="hero-heading">Jayakody Curtain</h1>
-         <p class="hero-paragraph">Add a touch of style to every room with our curtains.</p>
+         <h1 class="heading hero-heading">Jayakody Curtain</h1>
+         <p class="hero-paragraph mt-5">"Let every room breathe with beauty — <br> Our curtains whisper style into your home."</p>
+      </div>
+      <div class="container-fluid btn-flex">
+         <button class="btn hero-btn" id="heroGalleryBtn">Gallery</button>
+         <button class="btn hero-btn" id="heroCallusBtn">Call Us</button>
       </div>
    </section>
    <!-- hero section end -->
+
+   <!-- service section start -->
+   <section class="section-service">
+      <div class="container-fluid">
+         <h2 class="heading pt-5">Services</h2>
+         <p class="mt-4 mb-3">We offer design and install beautiful window treatments that transform any room. From consultation to installation, we handle every detail with precision and care.</p>
+      </div>
+
+      <div id="carouselService" class="carousel carousel-dark slide mt-3">
+         <div class="carousel-inner container-service">
+            <div class="carousel-item active">
+               <div class="service-flex">
+                  <div class="title-service">
+                     <h6>Design</h6>
+                     <h4 class="mt-4 mb-3">Custom Curtain Design</h4>
+                     <p class="mb-5">We create unique designs tailored to your space, bringing together style, comfort, and the perfect fit for your home.</p>
+                     <a href="" type="button" class="btn-service">Explore</a>
+                  </div>
+                  <div class="img-service">
+                     <img src="./media/design.png" alt="modern curtain design">
+                  </div>
+               </div>
+            </div>
+            <div class="carousel-item">
+               <div class="service-flex">
+                  <div class="title-service">
+                     <h6>Installation</h6>
+                     <h4 class="mt-4 mb-3">Professional Installation</h4>
+                     <p class="mb-5">Expert fitting and hanging of all curtain types, ensuring a perfect finish and a smooth, secure installation every time.</p>
+                     <a href="" type="button" class="btn-service">Explore</a>
+                  </div>
+                  <div class="img-service">
+                     <img src="./media/installation.png" alt="modern curtain design">
+                  </div>
+               </div>
+            </div>
+            <div class="carousel-item">
+               <div class="service-flex">
+                  <div class="title-service">
+                     <h6>Consultation</h6>
+                     <h4 class="mt-4 mb-3">Custom Curtain Design</h4>
+                     <p class="mb-5">Get a free, friendly consultation to choose the right colors, fabrics, and styles—so your space turns out just as you imagined.</p>
+                     <a href="" type="button" class="btn-service">Explore</a>
+                  </div>
+                  <div class="img-service">
+                     <img src="./media/consultation.png" alt="modern curtain design">
+                  </div>
+               </div>
+            </div>
+         </div>
+         <button class="carousel-control-prev" type="button" data-bs-target="#carouselService" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+         </button>
+         <button class="carousel-control-next" type="button" data-bs-target="#carouselService" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+         </button>
+      </div>
+   </section>
+   <!-- service section end -->
+
+   <!-- work section start -->
+   <section class="section-work">
+      <div class="container-fluid">
+         <h2 class="heading pt-5">Our work</h2>
+         <p class="mt-4">We have spent years perfecting our craft and building lasting relationships with clients. Each project reflects our commitment to quality and attention to detail.</p>
+      </div>
+   </section>
+   <!-- work section end -->
+
+   <!-- about us section start -->
+   <section class="section-aboutus">
+      <div class="container-fluid">
+         <h2 class="heading pt-5">About Us</h2>
+         <p class="mt-4">We have spent years perfecting our craft and building lasting relationships with clients. Each project reflects our commitment to quality and attention to detail.</p>
+      </div>
+   </section>
+   <!-- about us section end -->
 
    <!-- javaScript linked -->
    <script type="text/javaScript" src="./bootstrap-5.3.8/js/bootstrap.bundle.min.js"></script>
