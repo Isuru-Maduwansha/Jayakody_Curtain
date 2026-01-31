@@ -3,9 +3,11 @@
    --font-roboto: "Roboto Slab", serif;
    --font-montserrat: "Montserrat", serif;
    --font-oswald: "Oswald", serif;
-   --c-darkgreen500: rgb(11, 78, 65);
-   --c-darkgreen600: rgb(6, 73, 60);
+   --c-darkgreen500: rgb(13, 107, 88);
+   --c-darkgreen600: rgb(11, 74, 62);
    --c-lightgray: rgb(220, 220, 220);
+   --c-brown: #8B5E3C;
+   --c-white: rgb(255, 255, 255);
 }
 
 /* body */
@@ -21,6 +23,11 @@ body{
    margin: 0 auto;
 }
 
+.container-body{
+   width: 70%;
+   margin: 1em auto;
+}
+
 .heading{
    font-weight: 600;
    color: var(--c-darkgreen600);
@@ -32,11 +39,12 @@ h2{
 
 h4{
    font-weight: 400;
+   color: var(--c-darkgreen500);
 }
 
 h6{
    font-weight: 800;
-   color: var(--c-darkgreen600);
+   color: var(--c-brown);
 }
 
 p{
@@ -71,6 +79,7 @@ img{
 
 .btn-login{
    border: 2px solid var(--c-lightgray);
+   margin-bottom: 2em;
 }
 
 .navbar-toggler-icon{
@@ -140,17 +149,8 @@ img{
 /* service section */
 
 .section-service{
-   background-color: rgb(255, 255, 255);
-}
-
-.container-service{
-   width: 70%;
-   margin: 1em auto;
-}
-
-.carousel{
-   background-color: rgba(215, 214, 214, 0.208);
-   padding: 1em 0;
+   background-color: rgba(65, 65, 65, 0.208);
+   padding: 1em 0 2em;
 }
 
 .btn-service{
@@ -166,14 +166,56 @@ img{
    background-color: rgba(138, 130, 177, 0.2);
 }
 
+.title-service{
+   margin-bottom: 1em;
+}
+
 .img-service{
    width: 100%;
-   margin-top: 3em;
+   margin-top: 1em;
 }
 
 .service-flex{
    display: flex;
    flex-direction: column;
+}
+
+/* about us section */
+
+.aboutus-body{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.aboutus-img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.aboutus-body{
+   padding: 1em 0;
+}
+
+.about-paragraph{
+   color: var(--c-white);
+   font-size: 1.1rem;
+   margin: 0;
+}
+
+.about-h2{
+   color: rgb(167, 16, 16);
+   font-size: 2.5rem;
+}
+
+.aboutus-flex{
+   text-align: end;
 }
 
 /* responsive for > 650px */
@@ -192,7 +234,14 @@ img{
    }
 }
 
-/* responsive for > 900px */
+@media(min-width: 770px){
+   /* navbar section */
+   .btn-login{
+      margin-bottom: 0;
+   }
+}
+
+/* responsive for > 1000px */
 
 @media(min-width: 1000px){
    .img-service{
@@ -200,13 +249,10 @@ img{
    margin-top: 0;
    }
    .title-service{
-      width: 37%;
+      width: 40%;
    }
    .service-flex{
       flex-direction: row;
       gap: 5%;
-   }
-   .service-paragraph{
-      margin-bottom: 2em;
    }
 }
