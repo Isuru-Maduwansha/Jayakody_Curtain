@@ -1,0 +1,281 @@
+/* root variable */
+:root {
+  --font-roboto: "Roboto Slab", serif;
+  --font-montserrat: "Montserrat", serif;
+  --font-oswald: "Oswald", serif;
+  --c-darkgreen500: rgb(13, 107, 88);
+  --c-darkgreen600: rgb(11, 74, 62);
+  --c-lightgray: rgb(220, 220, 220);
+  --c-brown: #8b5e3c;
+  --c-white: rgb(255, 255, 255);
+  --c-transparent: rgba(255, 255, 255, 0.3);
+}
+
+/* body */
+
+body {
+  font-family: var(--font-roboto);
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.container-fluid {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.container-body {
+  width: 70%;
+  margin: 1em auto;
+}
+
+.heading {
+  font-weight: 600;
+  color: var(--c-darkgreen600);
+}
+
+h2 {
+  font-size: clamp(1.75rem, 2.5vw, 3.5rem);
+}
+
+h4 {
+  font-weight: 400;
+  color: var(--c-darkgreen500);
+}
+
+h6 {
+  font-weight: 800;
+  color: var(--c-brown);
+}
+
+p {
+  font-family: "Montserrat";
+}
+
+img {
+  width: 100%;
+}
+
+/* nav-bar */
+
+.navbar-style {
+  background-color: var(--c-transparent);
+  padding: 0;
+  margin: 5px 20px;
+  border-radius: 50px;
+  border: 1px solid var(--c-lightgray);
+}
+
+.offcanvas-style {
+  background-color: var(--c-white);
+  padding: 0;
+  margin: 5px 20px;
+  border-radius: 50px;
+}
+
+.navbar-title {
+  font-family: var(--font-montserrat);
+  font-size: 24px;
+  margin: 0;
+}
+
+.offcanvas-title {
+  font-family: var(--font-montserrat);
+  font-size: 24px;
+  margin: 0 0 0 20px;
+}
+
+.nav-link {
+  color: var(--c-darkgreen500);
+  font-weight: 400;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  padding-left: 20px;
+}
+
+.nav-link:hover {
+  background-color: var(--c-lightgray);
+  color: black;
+  opacity: 0.5;
+}
+
+.btn-login {
+  margin-top: 30px;
+}
+
+.navbar-toggler-icon {
+  width: 20px;
+  height: 20px;
+  filter: invert(1);
+}
+
+/* hero section */
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.video-mobile {
+  display: block;
+}
+
+.video-desktop {
+  display: none;
+}
+
+.hero-heading {
+  font-size: clamp(2.25rem, 3.5vw, 5rem);
+  margin-top: clamp(15vh, 20vh, 25vh);
+  text-align: center;
+}
+
+.hero-paragraph {
+  font-size: clamp(1.2rem, 1.7vw, 1.9rem);
+  font-weight: 500;
+  text-align: center;
+  color: var(--c-lightgray);
+}
+
+.btn-flex {
+  display: flex;
+  gap: 1em;
+  justify-content: center;
+  margin-top: 5em;
+}
+
+.hero-btn {
+  color: var(--c-lightgray);
+  background-color: var(--c-darkgreen600);
+  padding: 0.5em 3em;
+}
+
+.hero-btn:hover {
+  color: var(--c-lightgray);
+  background-color: rgba(112, 112, 112, 0.3);
+}
+
+/* service section */
+
+.section-service {
+  background-color: rgba(65, 65, 65, 0.208);
+  padding: 1em 0 2em;
+}
+
+.btn-service {
+  text-decoration: none;
+  color: var(--c-lightgray);
+  background-color: var(--c-darkgreen600);
+  padding: 0.5em 2em;
+  border-radius: 0.6em;
+}
+
+.btn-service:hover {
+  color: var(--c-darkgreen600);
+  background-color: rgba(138, 130, 177, 0.2);
+}
+
+.title-service {
+  margin-bottom: 1em;
+}
+
+.img-service {
+  width: 100%;
+  margin-top: 1em;
+}
+
+.service-flex {
+  display: flex;
+  flex-direction: column;
+}
+
+/* about us section */
+
+.aboutus-body {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.aboutus-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.aboutus-body {
+  padding: 1em 0;
+}
+
+.about-paragraph {
+  color: var(--c-white);
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.about-h2 {
+  color: rgb(167, 16, 16);
+  font-size: 2.5rem;
+}
+
+.aboutus-flex {
+  text-align: end;
+}
+
+/* responsive for > 650px */
+
+@media (min-width: 650px) {
+  /* hero section */
+  .video-mobile {
+    display: none;
+  }
+  .video-desktop {
+    display: block;
+  }
+}
+
+@media (min-width: 992px) {
+  /* navbar section */
+  .nav-link {
+    margin-left: 2.3em;
+    margin-bottom: 0px;
+    padding-left: 0px;
+    font-weight: 600;
+  }
+  .btn-login {
+    margin-top: 0px;
+  }
+}
+
+/* responsive for > 1000px */
+
+@media (min-width: 1000px) {
+  .img-service {
+    width: 60%;
+    margin-top: 0;
+  }
+  .title-service {
+    width: 40%;
+  }
+  .service-flex {
+    flex-direction: row;
+    gap: 5%;
+  }
+}

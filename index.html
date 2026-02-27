@@ -13,37 +13,52 @@
    <link rel="stylesheet" href="./bootstrap-5.3.8/css/bootstrap.min.css" />
 
    <!-- custom css linked -->
-   <link rel="stylesheet" href="./css/style.css" />
+   <link rel="stylesheet" href="./css/index.css" />
 </head>
 
 <body>
    <!-- navbar section start -->
    <header id="navBarSection">
-      <nav class="navbar navbar-expand-md">
+      <nav class="navbar navbar-style navbar-expand-lg fixed-top">
          <div class="container-fluid">
-            <a href="#" class="navbar-brand"><img src="./media/logo.png" class="navbar-logo"
-                  alt="Jayakody Curtains" /></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
-               aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle-navigation"
-               id="navbarTogglerButton">
+            <a href="#" class="navbar-brand">
+               <p class="navbar-title">Jayakody Curtains</p>
+            </a>
+
+            <!-- toggler button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+               aria-controls="offcanvasNavbar" aria-label="Toggle-navigation" id="navbarTogglerButton">
                <span class="navbar-toggler-icon"></span>
             </button>
 
-            <div class="collapse navbar-collapse" id="navbarContent">
-               <ul class="navbar-nav ms-auto text-center">
-                  <li class="nav-item">
-                     <a href="#" class="nav-link active">Home</a>
-                  </li>
-                  <li class="nav-item">
-                     <a href="" class="nav-link">Gallery</a>
-                  </li>
-                  <li class="nav-item">
-                     <a href="" class="nav-link">Contact Us</a>
-                  </li>
-                  <li class="nav-item">
-                     <a href="" class="nav-link btn btn-login" id="ButtonLogin">Log In</a>
-                  </li>
-               </ul>
+            <!-- off canvas -->
+            <div class="offcanvas offcanvas-end offcanvas-style" tabindex="-1" id="offcanvasNavbar">
+               <div class="offcanvas-header">
+                  <a href="#" class="navbar-brand">
+                     <p class="offcanvas-title">Jayakody Curtains</p>
+                  </a>
+                  <button type="button" class="btn-close me-3" data-bs-dismiss="offcanvas"></button>
+               </div>
+
+               <div class="offcanvas-body">
+                  <ul class="navbar-nav ms-auto">
+                     <li class="nav-item">
+                        <a href="index.html#home" class="nav-link active">Home</a>
+                     </li>
+                     <li class="nav-item">
+                        <a href="index.html#services" class="nav-link">Services</a>
+                     </li>
+                     <li class="nav-item">
+                        <a href="gallery.html" class="nav-link">Gallery</a>
+                     </li>
+                     <li class="nav-item">
+                        <a href="index.html#aboutUs" class="nav-link">About Us</a>
+                     </li>
+                     <li class="nav-item">
+                        <a href="login.html" class="nav-link btn btn-login" id="ButtonLogin">Log In</a>
+                     </li>
+                  </ul>
+               </div>
             </div>
          </div>
       </nav>
@@ -51,7 +66,7 @@
    <!-- navbar section end -->
 
    <!-- hero section start -->
-   <section class="hero">
+   <section class="hero" id="home">
       <!-- mobile video -->
       <video autoplay muted loop playsinline class="hero-video video-mobile">
          <source src="./media/mobile-video.mp4" type="video/mp4" />
@@ -77,7 +92,7 @@
    <!-- hero section end -->
 
    <!-- service section start -->
-   <section class="section-service">
+   <section class="section-service" id="services">
       <div id="carouselService" class="carousel carousel-dark slide">
 
          <div class="container-fluid">
@@ -113,7 +128,7 @@
                   <div class="title-service">
                      <h6>Installation</h6>
                      <h4 class="mt-4 mb-3">Professional Installation</h4>
-                     <p class="mb-5">
+                     <p class="mb-4">
                         Expert fitting and hanging of all curtain types, ensuring a
                         perfect finish and a smooth, secure installation every time.
                      </p>
@@ -130,7 +145,7 @@
                   <div class="title-service">
                      <h6>Consultation</h6>
                      <h4 class="mt-4 mb-3">Custom Curtain Design</h4>
-                     <p class="mb-5">
+                     <p class="mb-4">
                         Get a free, friendly consultation to choose the right colors,
                         fabrics, and styles—so your space turns out just as you
                         imagined.
@@ -165,15 +180,18 @@
    <!-- service section end -->
 
    <!-- work section start -->
-   <section class="section-work pb-4">
+   <section class="section-work pb-5">
 
       <div class="container-fluid">
-            <h2 class="heading pt-5">Our work</h2>
-            <p style="color: rgb(20, 20, 20); font-size: 1.1rem;" class="mt-3 mb-5">
-               Experience our completed curtain projects, reflecting timeless craftsmanship and thoughtfully selected
-               premium fabrics.
-            </p>
+         <h2 class="heading pt-5">Our work</h2>
+         <p style="color: rgb(20, 20, 20); font-size: 1.1rem;" class="mt-3 mb-4">
+            Experience our completed curtain projects, reflecting timeless craftsmanship and thoughtfully selected
+            premium fabrics.
+         </p>
+         <div class="pb-4">
+            <a href="" type="button" class="btn-service">Gallery</a>
          </div>
+      </div>
 
       <div id="carouselWork" class="carousel carousel-dark slide">
 
@@ -183,12 +201,12 @@
                <img src="./media/design.png" alt="modern curtain design" />
             </div>
 
-            <div class="carousel-item active" data-bs-interval="100">
-               <img src="./media/design.png" alt="modern curtain design" />
+            <div class="carousel-item" data-bs-interval="100">
+               <img src="./media/extra.png" alt="modern curtain design" />
             </div>
-            
-            <div class="carousel-item active" data-bs-interval="100">
-               <img src="./media/design.png" alt="modern curtain design" />
+
+            <div class="carousel-item" data-bs-interval="100">
+               <img src="./media/about.png" alt="modern curtain design" />
             </div>
 
          </div>
@@ -206,7 +224,7 @@
    <!-- work section end -->
 
    <!-- about us section start -->
-   <section class="section-aboutus">
+   <section class="section-aboutus" id="aboutUs">
       <div class="aboutus-body">
          <img class="aboutus-img" src="./media/both.png" alt="">
          <div class="container-fluid">
@@ -236,13 +254,13 @@
    <!-- about us section end -->
 
    <!-- footer start -->
-   <footer>
+   <footer id="contactUs">
    </footer>
    <!-- footer end -->
 
    <!-- javaScript linked -->
-   <script type="text/javaScript" src="./bootstrap-5.3.8/js/bootstrap.bundle.min.js"></script>
-   <script type="text/javaScript" src="./javaScript/main.js"></script>
+   <script src="./bootstrap-5.3.8/js/bootstrap.bundle.min.js"></script>
+   <script src="./javaScript/index.js"></script>
 </body>
 
 </html>

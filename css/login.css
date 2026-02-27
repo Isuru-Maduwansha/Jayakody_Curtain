@@ -1,0 +1,91 @@
+/* root variable */
+:root {
+  --font-roboto: "Roboto Slab", serif;
+  --font-montserrat: "Montserrat", serif;
+  --font-oswald: "Oswald", serif;
+  --c-darkgreen500: rgb(13, 107, 88);
+  --c-darkgreen400: rgba(29, 135, 77, 0.759);
+  --c-lightgray: rgb(173, 173, 173);
+  --c-brown: #8b5e3c;
+  --c-white: rgb(255, 255, 255);
+  --c-blue: rgba(22, 66, 198, 0.693);
+}
+
+/* body */
+
+body {
+  font-family: var(--font-montserrat);
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.container-fluid {
+  width: 90%;
+  margin: 0 auto;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 500px;
+  margin: 120px auto;
+  background-color: transparent;
+  border: 1px solid var(--c-lightgray);
+  border-radius: 15px;
+}
+
+.login-hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.login-heroimage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.login-header {
+  font-family: var(--font-roboto);
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--c-darkgreen500);
+}
+
+.input-style {
+  border: 1px solid var(--c-lightgray);
+}
+
+.btn-login {
+  background-color: transparent;
+  color: var(--c-darkgreen500);
+  border: 1px solid var(--c-lightgray);
+  padding: 10px 100px;
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+.btn-login:hover {
+  background-color: var(--c-darkgreen400);
+  color: var(--c-white);
+}
+
+/* responsive for > 650px */
+
+@media (min-width: 650px) {
+}
+
+@media (min-width: 992px) {
+}
+
+/* responsive for > 1000px */
+
+@media (min-width: 1000px) {
+}
