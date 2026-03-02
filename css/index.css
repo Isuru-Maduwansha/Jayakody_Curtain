@@ -4,11 +4,13 @@
   --font-montserrat: "Montserrat", serif;
   --font-oswald: "Oswald", serif;
   --c-darkgreen500: rgb(13, 107, 88);
-  --c-darkgreen600: rgb(11, 74, 62);
+  --c-darkgreen300: #3aa374;
+  --c-darkgreen600: rgb(12, 80, 68);
   --c-lightgray: rgb(220, 220, 220);
   --c-brown: #8b5e3c;
   --c-white: rgb(255, 255, 255);
-  --c-transparent: rgba(255, 255, 255, 0.3);
+  --c-transparent: rgba(255, 255, 255, 0.8);
+  --c-black: #191919;
 }
 
 /* body */
@@ -52,6 +54,11 @@ p {
   font-family: "Montserrat";
 }
 
+.paragraph {
+  color: var(--c-black);
+  font-size: 1.1rem;
+}
+
 img {
   width: 100%;
 }
@@ -61,7 +68,7 @@ img {
 .navbar-style {
   background-color: var(--c-transparent);
   padding: 0;
-  margin: 5px 20px;
+  margin: 10px 20px 0 20px;
   border-radius: 50px;
   border: 1px solid var(--c-lightgray);
 }
@@ -69,7 +76,7 @@ img {
 .offcanvas-style {
   background-color: var(--c-white);
   padding: 0;
-  margin: 5px 20px;
+  margin: 5px 0 0 0;
   border-radius: 50px;
 }
 
@@ -93,10 +100,10 @@ img {
   padding-left: 20px;
 }
 
-.nav-link:hover {
-  background-color: var(--c-lightgray);
+.nav-link:hover,
+.nav-link:active {
+  background-color: var(--c-darkgreen300);
   color: black;
-  opacity: 0.5;
 }
 
 .btn-login {
@@ -146,7 +153,7 @@ img {
   font-size: clamp(1.2rem, 1.7vw, 1.9rem);
   font-weight: 500;
   text-align: center;
-  color: var(--c-lightgray);
+  color: var(--c-black);
 }
 
 .btn-flex {
@@ -201,6 +208,12 @@ img {
   flex-direction: column;
 }
 
+/* section-work */
+
+.section-work {
+  padding-bottom: 3em;
+}
+
 /* about us section */
 
 .aboutus-body {
@@ -225,13 +238,13 @@ img {
 }
 
 .about-paragraph {
-  color: var(--c-white);
+  color: var(--c-black);
   font-size: 1.1rem;
   margin: 0;
 }
 
 .about-h2 {
-  color: rgb(167, 16, 16);
+  color: #225872;
   font-size: 2.5rem;
 }
 
@@ -239,9 +252,80 @@ img {
   text-align: end;
 }
 
-/* responsive for > 650px */
+/* footer-section */
 
-@media (min-width: 650px) {
+.footer-section {
+  /* background-color: var(--c-black); */
+  background-color: #7aa05a;
+  padding-bottom: 1em;
+  color: var(--c-white);
+}
+
+.footer-heading {
+  text-align: center;
+  font-size: 36px;
+  font-weight: 600;
+  font-family: var(--font-montserrat);
+  padding: 40px 0;
+  margin: 0;
+}
+
+.footer-heading::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: var(--c-white);
+  margin-top: 10px;
+}
+
+.contact-link {
+  font-family: var(--font-montserrat);
+  font-size: 1rem;
+  list-style: none;
+  margin-bottom: 15px;
+}
+
+.footer-list {
+  font-family: var(--font-montserrat);
+  font-size: 14px;
+  list-style: none;
+  margin-bottom: 15px;
+}
+
+.link-style {
+  text-decoration: none;
+  color: var(--c-white);
+}
+
+.contact-link:hover,
+.icon-size:hover,
+.footer-heading:hover,
+.footer-list:hover,
+.link-style:hover {
+  /* color: var(--c-darkgreen300); */
+  color: var(--c-black);
+}
+
+.icon-size {
+  font-size: 30px;
+  margin-right: 10px;
+  color: var(--c-white);
+}
+
+.footer-ul {
+  text-align: center;
+}
+
+.footer-items {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+/* responsive for > 670px */
+
+@media (min-width: 670px) {
   /* hero section */
   .video-mobile {
     display: none;
@@ -249,7 +333,20 @@ img {
   .video-desktop {
     display: block;
   }
+  .footer-contact {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .footer-ul {
+    text-align: start;
+  }
+  .footer-link {
+    display: flex;
+    justify-content: space-evenly;
+  }
 }
+
+/* responsive for > 992px */
 
 @media (min-width: 992px) {
   /* navbar section */
@@ -262,11 +359,6 @@ img {
   .btn-login {
     margin-top: 0px;
   }
-}
-
-/* responsive for > 1000px */
-
-@media (min-width: 1000px) {
   .img-service {
     width: 60%;
     margin-top: 0;
@@ -277,5 +369,26 @@ img {
   .service-flex {
     flex-direction: row;
     gap: 5%;
+  }
+  .footer-main {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .footer-contact {
+    gap: 100px;
+  }
+  .footer-link {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/* responsive for > 1200px */
+
+@media (min-width: 1200px) {
+  .footer-link {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 100px;
   }
 }
